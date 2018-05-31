@@ -1,8 +1,19 @@
 {
 	"homepage": "https://www.dbvis.com",
 	"version": "10.0.8",
-	"url": "https://www.dbvis.com/product_download/dbvis-10.0.12/media/dbvis_windows-x64_10_0_12.zip",
-	"extract_dir": "DbVisualizer",
+	"license": "http://www.dbvis.com/eula/",
+	"architecture": {
+        "64bit": {
+            "url": "https://www.dbvis.com/product_download/dbvis-10.0.8/media/dbvis_windows-x64_10_0_8.zip",
+            "hash": "5494b1facbea8daaa25862e9a4ee298a98c47fbb3eff5529f9779fd8486a5abe",
+            "extract_dir": "DbVisualizer"
+        },
+        "32bit": {
+            "url": "https://www.dbvis.com/product_download/dbvis-10.0.12/media/dbvis_windows_10_0_12.zip",
+            "hash": "c998915403cb52c0eca19291606db944c9fa8bcf06722e70226a591c80e97ea8",
+            "extract_dir": "DbVisualizer"
+        }
+    },
 	"bin": [
 		[
 			"dbvis.exe",
@@ -16,16 +27,24 @@
 		]
 	],
 	"checkver": {
-		"github": "https://www.dbvis.com/download/",
-		"re": "(?:v|Download DbVisualizer )?([\\d.]+(?:-[\\d])?)"
+		"url": "https://www.dbvis.com/download/",
+		"re": "Download DbVisualizer ([\\d.]+)"
 	},
 	"autoupdate": {
 		"architecture": {
 			"64bit": {
-				"url": "https://www.dbvis.com/product_download/dbvis-$version/media/dbvis_windows-x64_$version.zip"
+				"url": "https://www.dbvis.com/product_download/dbvis-$version/media/dbvis_windows-x64_$underscoreVersion.zip",
+				"extract_dir": "DbVisualizer",
+				"hash": {
+					"url": "$url.sha256"
+				}
 			},
 			"32bit": {
-				"url": "https://www.dbvis.com/product_download/dbvis-$version/media/dbvis_windows_$version.zip"
+				"url": "https://www.dbvis.com/product_download/dbvis-$version/media/dbvis_windows_$underscoreVersion.zip",
+				"extract_dir": "DbVisualizer",
+				"hash": {
+					"url": "$url.sha256"
+				}
 			}
 		}
 	}
