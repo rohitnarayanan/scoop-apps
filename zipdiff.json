@@ -5,7 +5,8 @@
 	"extract_dir": "zipdiff-0.4",
 	"bin": [
 		[
-			"build\\zipdiff.jar"
+			"build\\zipdiff.jar",
+			"zipdiff"
 		]
 	]
 }
