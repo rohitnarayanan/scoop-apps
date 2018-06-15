@@ -3,6 +3,9 @@
 	"version": "18.1.0.095.1630",
 	"license": "http://www.oracle.com/technetwork/licenses/sqldev-license-152021.html",
 	"url": "http://download.oracle.com/otn/java/sqldeveloper/sqldeveloper-18.1.0.095.1630-no-jre.zip",
+	"cookie": {
+		"oraclelicense": "accept-securebackup-cookie"
+	},
 	"extract_dir": "sqldeveloper",
 	"bin": [
 		[
