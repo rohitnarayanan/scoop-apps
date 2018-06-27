@@ -1,0 +1,37 @@
+{
+	"homepage": "https://www.soapui.org/open-source.html",
+	"license": "https://www.soapui.org/open-source/soapui-license.html",
+	"version": "5.4.0",
+	"architecture": {
+		"64bit": {
+			"url": "https://s3.amazonaws.com/downloads.eviware/soapuios/5.4.0/SoapUI-5.4.0-windows-bin.zip"
+		},
+		"32bit": {
+			"url": "https://s3.amazonaws.com/downloads.eviware/soapuios/5.4.0/SoapUI-5.4.0-win32-standalone-bin.zip"
+		}
+	},
+	"extract_dir": "SoapUI-5.4.0",
+	"bin": [
+		[
+			"bin\\soapui.bat",
+			"soapui"
+		]
+	],
+	"autoupdate": {
+		"architecture": {
+			"64bit": {
+				"url": "https://s3.amazonaws.com/downloads.eviware/soapuios/$version/SoapUI-$version-windows-bin.zip"
+			},
+			"32bit": {
+				"url": "https://s3.amazonaws.com/downloads.eviware/soapuios/$version/SoapUI-$version-win32-standalone-bin.zip"
+			}
+		},
+		"extract_dir": "SoapUI-$version"
+	},
+	"shortcuts": [
+		[
+			"bin\\soapui.bat",
+			"SoapUI"
+		]
+	]
+}
